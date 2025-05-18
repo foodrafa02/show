@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎉 Parabéns! Você Foi Selecionado para R$10.000</title>
+  <meta name="description" content="Você está entre os 2 finalistas para ganhar R$10.000! Pague só R$21,30 via PIX e garanta seu prêmio agora. Vagas limitadas!" />
+  <!-- Meta Open Graph -->
+  <meta property="og:title" content="Você Foi Selecionado para R$10.000!" />
+  <meta property="og:description" content="Pague apenas R$21,30 via PIX e reserve seu prêmio de R$10.000. Só 2 vagas!" />
+  <meta property="og:image" content="https://seusite.com.br/imagens/upsell-10000.jpg" />
+  <meta property="og:url" content="https://seusite.com.br/finalista" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    html, body {
+      margin: 0; padding: 0; height: 100%; background: #002523;
+    }
+    body {
+      font-family: Arial, sans-serif; color: #fff; text-align: center;
+    }
+    .container {
+      max-width: 520px; margin: 0 auto; min-height: 100vh;
+      padding: 30px 20px;
+      background: linear-gradient(90deg,#055d4c,#01332f);
+      border-radius:16px; box-shadow:0 0 20px rgba(0,0,0,0.6);
+      display:flex;flex-direction:column;justify-content:center;
+    }
+    @keyframes pulse {0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.05);opacity:0.9}}
+    @keyframes glow {from{box-shadow:0 0 6px rgba(255,191,0,0.3)}to{box-shadow:0 0 16px rgba(255,191,0,0.9)}}
+
+    h1 {font-size:32px;margin-bottom:12px;color:#ffd800;text-shadow:1px 1px 4px #000;animation:pulse 1.5s infinite;}
+    .premio {font-size:30px;margin:20px 0;color:#00ffd5;font-weight:bold;text-shadow:1px 1px 4px #000;animation:pulse 1.8s infinite;}
+    p {font-size:18px;line-height:1.4;margin:8px 0;}
+    .destaque {color:#00ff99;font-weight:bold;}
+    ul {text-align:left;display:inline-block;margin:15px 0;font-size:18px;}
+    ul li {margin:6px 0;}
+    .taxa {background:#fff3cd;color:#856404;padding:12px;border-radius:10px;margin:18px 0;font-size:18px;font-weight:bold;animation:glow 2s infinite alternate;}
+    .valor-taxa {color:#e60000;}
+    .btn-pagar {display:inline-block;margin-top:20px;padding:16px 28px;font-size:20px;font-weight:bold;color:#fff;background:linear-gradient(to right,#ffbf00,#ffa500);border-radius:40px;text-decoration:none;box-shadow:0 0 12px rgba(255,191,0,0.6);animation:pulse 1.5s infinite;}
+    .urgencia {color:#ff4444;font-weight:bold;margin-top:10px;}
+  </style>
+</head>
+<body>
+
+<body onload="tocarAbertura()">
+
+  <!-- áudio de abertura com autoplay -->
+  <audio 
+    id="audio-abertura" 
+    src="audio/abertura.mp3" 
+    preload="auto" 
+    autoplay 
+    playsinline
+  ></audio>
+
+  <div class="container">
+    <h1>🎉 VOCÊ FOI SELECIONADO!</h1>
+    <p>Você está entre os <span class="destaque">2 FINALISTAS</span> para <span class="destaque">R$10.000</span> em dinheiro.</p>
+
+    <div class="premio">💰 R$10.000,00</div>
+
+    <p>Para liberar seu prêmio <strong>agora</strong>, basta:</p>
+    <ul>
+      <li>Pagar a <span class="destaque">taxinha de R$21,30</span> via PIX</li>
+      <li>Receber seu dinheiro em até <span class="destaque">2 minutos</span></li>
+    </ul>
+
+    <div class="taxa">
+      💳 Taxa Administrativa: <span class="valor-taxa">R$ 21,30</span>
+    </div>
+
+    <p><span class="destaque">IMPORTANTE:</span> Essa taxa cobre os custos de liberação e verificação.</p>
+    <p class="urgencia">Últimas vagas! Só 2 finalistas. Garanta a sua agora!</p>
+
+    <a class="btn-pagar" href="https://pay.compraeguraapay.com.br/checkout/bcb23840-5ebf-4f75-b28e-52b8add8a41c">
+      ✅ PAGAR AGORA
+    </a>
+  </div>
+
+  <!-- 2) SCRIPTS: -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const audio = document.getElementById('audio-abertura');
+      // tenta tocar o áudio assim que carregar:
+      audio.play().catch(() => {
+        // se o navegador bloquear autoplay, deixa pronto para tocar após interação:
+        document.body.addEventListener('click', () => audio.play(), { once: true });
+      });
+    });
+
+    // seu pixel de conversão Kwai aqui
+  </script>
+
+</body>
+</html>
